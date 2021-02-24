@@ -1,2 +1,2 @@
 # PROG-FEUP
-A repository for solved exercises found in one of FEUP's distinct programming courses (PROG),
+A repository that contains my solutions to the suggested exercises throughout the programming course taken at FEUP (PROG).
