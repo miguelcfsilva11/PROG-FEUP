@@ -1,7 +1,11 @@
 #include <iostream>
-using namespace std
+using namespace std;
 
-int main ()
+int main()
 {
-    cout << int(8) << endl
+	char c;
+	cout << "Insert a character: ";
+	cin >> c;
+	cout << "ASCII Value of " << c << " is " << int(c);
+	return 0;
 }
