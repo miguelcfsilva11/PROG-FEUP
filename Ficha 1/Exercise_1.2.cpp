@@ -1,3 +1,5 @@
+// Program that returns the mean of 3 given integers
+
 #include <iostream>
 using namespace std;
 
@@ -17,6 +19,7 @@ int main()
 	cout << "A - mean equals: " << A - mean << endl;
 	cout << "B - mean equals: " << B - mean << endl;
 	cout << "C - mean equals: " << C - mean << endl;
+	return 0;
 
 
 }
