@@ -1,3 +1,5 @@
+// Program that solves a possible system of linear equations
+
 #include <iostream>
 #include <cmath>
 
