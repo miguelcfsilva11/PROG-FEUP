@@ -1,3 +1,5 @@
+//Program that computes the sum of two given hours of the day
+
 #include <iostream>
 #include <cmath>
 
@@ -18,5 +20,6 @@ int main()
 	h3 = (h1 + h2 + ((m1 + m2) / 60)) % 24;
 	d3 = (h1 + h2) / 24;
 	cout << d3 << " day(s), " << h3 << " hour(s), " <<  m3 << " minute(s) and " << s3 << " seconds." << endl;
+	return 0;
   
 }
