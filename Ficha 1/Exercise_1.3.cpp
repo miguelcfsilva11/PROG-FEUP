@@ -1,3 +1,5 @@
+// Program that outputs the mass of a sphere
+
 #include <iostream>
 #include <cmath>
 
