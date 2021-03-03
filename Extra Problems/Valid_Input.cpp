@@ -1,4 +1,4 @@
-//
+// Program that checks if the input is solely an integer and returns the sum of all inputs
 
 #include <iostream>
 using namespace std;
@@ -10,7 +10,7 @@ int main()
 		int value;
 		cout << "Value number " << i << " : ";
 		cin >> value;
-		while (cin.fail())
+		while (cin.fail() || cin.peek() != '\n')
 		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
