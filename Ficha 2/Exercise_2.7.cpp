@@ -48,4 +48,31 @@ int main()
 
 }
 // C) is the same algorithm but only up until 100
+// D) - Program that computes the largest prime number that an unsigned long can possibly stote (may take a minute to reach that same number)
 
+#include <iostream>
+#include <algorithm>	// std::sort
+#include <vector>		// use of vectors
+using namespace std;
+int main()
+{
+	unsigned long num = 0;
+	int i = 2;
+	bool isPrime = true;
+	while (i > 0) {
+		for (int k = 2; k < sqrt(i); k++) {
+			if (i % k) {
+				bool isPrime = false;
+				break;
+			}
+		}
+		if (isPrime) {
+			num = i;
+		}
+		isPrime = true;
+		i++;
+	}
+	cout << "The largest prime that can be stored in a unsigned long is: " << num << endl;
+	return 0;
+
+}
