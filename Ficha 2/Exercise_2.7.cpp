@@ -24,3 +24,28 @@ int main()
 
 
 }
+
+// B) - Program that prints all prime numbers up until 1000
+
+#include <iostream>
+#include <algorithm>	// std::sort
+#include <vector>		// use of vectors
+using namespace std;
+int main()
+{
+	int num;
+	bool isPrime;
+	isPrime = true;
+	for (int i = 2; i < 1000; i++)
+		for (int k = 2; k < 1000; k++)
+			if (k > sqrt(i)) {
+				cout << i << " ";
+				break;
+			}
+			else if (i % k == 0)
+				break;
+	return 0;
+
+}
+// C) is the same algorithm but only up until 100
+
