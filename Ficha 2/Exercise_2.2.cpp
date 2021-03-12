@@ -49,3 +49,29 @@ int main()
 	}
 	return 0;
 }
+
+// C) - Program that checks if the given numbers can represent a certain triangle's sides length
+
+#include <iostream>
+#include <algorithm>    // std::sort
+#include <vector> 
+using namespace std;
+int main()
+{
+	int number1, number2, number3, i;
+	cout << "This program takes three numbers and computes them by descending order" << endl;
+	cout << "First number: ";
+	cin >> number1;
+	cout << "Second number: ";
+	cin >> number2;
+	cout << "Third number: ";
+	cin >> number3;
+	int myNumbers[] = { number1, number2, number3 };
+	vector <int> myvector(myNumbers, myNumbers + 3);
+	sort(myvector.begin(), myvector.begin() + 3, greater<int>());
+	if (myvector[0] > myvector[1] + myvector[2])
+		cout << "These 3 numbers can't represent any triangle's sides length!" << endl;
+	else
+		cout << "These 3 numbers may represent a certain triangle's sides length!" << endl;
+	return 0;
+}
