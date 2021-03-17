@@ -3,11 +3,13 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <string.h>
 using namespace std;
 
 int main()
-{
-	double op1, op2, result, M;
+{	
+
+	double op1, op2, result, memory;
 	string type, choice;
 	cout << "This program executes simple algebraic operations" << endl;
 	cout << "Possible operations (other than addition and subtraciton):\n* - for multiplying\n/ - for dividing\n" << endl;
@@ -36,20 +38,20 @@ int main()
 		}
 		cout << "What do you want to do with this result?\nPress M to save it, MC to to clear the memory\n";
 		cout << "C to clear the contents of the display\nM+ or M- to add or subtract its content to the memory\n";
-		cout << "And finaly, MR to show the content saved in memory.\n Pick one of these options (write STOP to leave): ";
-		cin >> M;
+		cout << "And finaly, MR to show the content saved in memory.\n\nPick one of these options (write STOP to leave): ";
+		cin >> choice;
 		if (choice == "M")
-			M = result;
+			memory = result;
 		else if (choice == "MR")
-			cout << M << endl;
+			cout << memory << endl;
 		else if (choice == "C")
 			cout << string(50, '\n');
 		else if (choice == "M-")
-			M -= result;
+			memory -= result;
 		else if (choice == "M+")
-			M += result;
+			memory += result;
 		else if (choice == "MC")
-			M = 0;
+			memory = 0;
 		else if (choice == "STOP")
 			break;
 	}
