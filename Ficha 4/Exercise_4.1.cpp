@@ -1,4 +1,4 @@
-// Program that reads integers into an array
+// Program that reads integers into an array, finds a given value out of all elements and computes the number of occurences of that same value
 
 #include <iostream>
 #include <cmath>
