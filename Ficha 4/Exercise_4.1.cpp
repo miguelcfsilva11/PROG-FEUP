@@ -49,21 +49,13 @@ int main()
         result = findValueInArray(a, size_array, value, pos1, pos2);
     }
     else
-    {
         result = findValueInArray(a, size_array, value);
-    }
 
     if (result == -1)
-
-    {
         cout << "Value not found!" << endl;
-    }
 
     else
-
-    {
         cout << "Value found at index " << result << "." << endl;
-    }
 
     return 0;
 
