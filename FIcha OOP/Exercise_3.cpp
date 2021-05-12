@@ -92,7 +92,7 @@ void Person::showYear(){
 
 int main()
 {
-    Date birthday(2002,11,22);
+    Date birthday(2002,9,29);
     Person Peter("Male", "Miguel", birthday);
     Peter.showYear();
 }

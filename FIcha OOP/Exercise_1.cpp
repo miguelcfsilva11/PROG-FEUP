@@ -63,6 +63,6 @@ unsigned int Date::getYear() const {
 
 int main()
 {
-    Date birthday(2002,11,22);
+    Date birthday(2002,9,29);
     birthday.getYear();
 }
