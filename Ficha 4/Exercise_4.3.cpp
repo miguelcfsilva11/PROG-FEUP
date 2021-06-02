@@ -5,7 +5,7 @@
 #include <iomanip>
 #include <ctime>
 #include <vector>
-#include <bits/stdc++.h>
+
 using namespace std;
 
 int bubbleSort(vector<int> &v){
