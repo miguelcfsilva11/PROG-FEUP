@@ -90,4 +90,5 @@ int main()
 {
     Date birthday(2002,9,29);
     birthday.getYear();
+    return 0;
 }
