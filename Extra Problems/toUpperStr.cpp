@@ -18,7 +18,7 @@ void toUpperStr( string& str )
 }
 
 
-void transformLine( string& str)
+string transformLine( string& str)
 {
     for (size_t i = 0; i < str.size(); i++)
     {
@@ -37,13 +37,32 @@ void transformLine( string& str)
         }
     }
 
+    return str;
+
 }
 
+
+void decomposeLine( string& line, vector<string>& words)
+{
+    string transLine = transformLine(line);
+    stringstream ss(transLine);
+    string name;
+
+    while (ss >> name)
+    {
+        words.push_back(name);
+    }
+
+    for(size_t i = 0; i < words.size(); i++)
+    {
+        cout << words[i] << endl;
+    }
+}
 
 int main()
 {
     string greeting = "Hey, my name is Miguel!";
-    transformLine(greeting);
-    cout << greeting << endl;
+    vector<string> words;
+    decomposeLine(greeting, words);
     return 0;
 }
