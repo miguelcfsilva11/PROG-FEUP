@@ -36,6 +36,21 @@ private:
 
 };
 
+
+
+Date::Date(){
+    this->year = 2002;
+    this->month = 11;
+    this->day = 22;
+
+}
+
+Date::Date(unsigned int year, unsigned int month,unsigned int day){
+    this->year = year;
+    this->month = month;
+    this->day = day;
+}
+
 bool operator== (Date date1, Date date2)
 {
     if (date1.getYear() == date2.getYear() &&
@@ -56,19 +71,6 @@ ostream& operator<< (ostream &out, Date date1)
     return out;
 }
 
-Date::Date(){
-    this->year = 2002;
-    this->month = 11;
-    this->day = 22;
-
-}
-
-Date::Date(unsigned int year, unsigned int month,unsigned int day){
-    this->year = year;
-    this->month = month;
-    this->day = day;
-}
-
 void Date::setDate(unsigned int year, unsigned int month,unsigned int day){
     this->year = year;
     this->month = month;
@@ -80,15 +82,21 @@ void Date::setYear(unsigned int year){
 }
 
 unsigned int Date::getYear() const {
-    cout << this->year << endl;
-    return 0;
+    return this->year;
 }
 
+unsigned int Date::getDay() const {
+    return this->day;
+}
+
+unsigned int Date::getMonth() const {
+    return this->month;
+}
 
 
 int main()
 {
     Date birthday(2002,9,29);
-    birthday.getYear();
+    cout << birthday << endl;
     return 0;
 }
