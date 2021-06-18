@@ -1,4 +1,4 @@
-// Exercise to train C dynamic allocation
+// Exercise to train C++ dynamic allocation
 
 #include <iostream>
 #include <iomanip>
@@ -13,21 +13,21 @@ int main()
     int numRows, numCols;
     cin >> numRows >> numCols;
 
-    int** board = (int**)malloc(sizeof(int)* numRows);
+    int** board = new int* [numRows];
 
-    for(int i = 0; i < numRows; i++)
+    for (int i = 0; i < numRows; i++)
     {
-        board[i] = (int*)malloc(sizeof(int)* numCols);
-    }
+        board[i] = new int [numCols];
 
+    }
     // Rest of the program
 
     for(int i = 0; i < numRows; i++)    
     {
-        free(board[i]);
+        delete [] board[i];
     }
 
-    free(board);
+    delete [] board;
 
     return 0;
 }
