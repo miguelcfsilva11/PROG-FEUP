@@ -15,7 +15,7 @@ struct Student {
 
 bool compareStudents(Student student1, Student student2)
 {
-    return (student1.grade > student2.grade);
+    return (student1.grade < student2.grade);
 }
 
 int main()
